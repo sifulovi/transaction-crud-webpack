@@ -36,11 +36,11 @@ class TransactionList extends Component {
                         <TransactionForm/>
                     </div>
                     <div className="uk-panel">
-                        <form className="uk-search uk-search-default">
-                            <a href="" data-uk-search-icon/>
+                      {/*  <form className="uk-search uk-search-default">
+                            <a href="#" data-uk-search-icon/>
                             <input className="uk-search-input" type="search" onChange={this.searchAccount}
                                    placeholder="Search..."/>
-                        </form>
+                        </form>*/}
                         <table className="uk-table uk-table-middle uk-table-divider">
                             <thead>
                             <tr>
@@ -52,7 +52,7 @@ class TransactionList extends Component {
                             </thead>
                             <tbody>
                             {
-                                this.props.list.length <= 0 ? "No Account is Inserted" :
+                                this.props.list.length <= 0 ? <span>No Account is Inserted</span> :
                                     this.props.list.map((item, index) => {
                                             return (
                                                 <tr key={index}>
