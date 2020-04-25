@@ -10,16 +10,16 @@ class TransactionList extends Component {
         this.props.deleteTransaction(index)
     }
 
-    searchAccount (event) {
+    searchAccount(event) {
         debugger;
         const searchKey = event.target.value
-        const erer ={aa:JSON.parse(localStorage.getItem(appConstants.TRANSACTION))}
+        const erer = {aa: JSON.parse(localStorage.getItem(appConstants.TRANSACTION))}
         const result = erer.aa.filter((account) => {
             console.log(account.accountName)
             account.accountName.includes(searchKey)
         })
-        console.log("asdasd" ,result)
-       this.props.updatedList(result)
+        console.log("asdasd", result)
+        this.props.updatedList(result)
     }
 
     editHandle = (index) => {
@@ -29,7 +29,7 @@ class TransactionList extends Component {
     render() {
         return (
             <div className="uk-container uk-container-center ">
-                <h3>Account Transaction List</h3>
+                <h3>Account Transaction CRUD</h3>
                 <hr className="uk-divider-icon"/>
                 <div className="uk-child-width-1-2@m uk-grid-match uk-grid" data-uk-grid>
                     <div className="uk-panel">
@@ -37,7 +37,7 @@ class TransactionList extends Component {
                     </div>
                     <div className="uk-panel">
                         <form className="uk-search uk-search-default">
-                            <a href="" data-uk-search-icon></a>
+                            <a href="" data-uk-search-icon/>
                             <input className="uk-search-input" type="search" onChange={this.searchAccount}
                                    placeholder="Search..."/>
                         </form>
