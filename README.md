@@ -1,4 +1,4 @@
-## A React js app using webpack configuration
+## A tiny transaction app with redux using webpack configuration
 
 ##### Step to run 
 Need to run following commands
